@@ -1,10 +1,9 @@
 import Hii from './Hii.jsx'
 function App() {
-
+  const name = 'Vedant'
   return (
     <>
-    <Hii/>
-    <h1>srvgdrs</h1>
+    <h1>srvgdrs {name }</h1>
     </>
   )
 }
