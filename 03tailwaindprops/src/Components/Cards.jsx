@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Card(){
+function Cards(){
     return(
         <div className="relative max-w-lg p-8 border bg-black border-gray-100 shadow-xl rounded-xl mb-10">
         <span className="absolute right-4 top-4 rounded-full px-3 py-1.5 bg-green-100 text-green-600 font-medium text-xs">
