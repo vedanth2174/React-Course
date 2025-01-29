@@ -4,15 +4,34 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-  let counter = 15
+  //in lecture
+  // let [counter, setCounter] = useState(15)
+  // // let counter = 15
+  // const addValue = function addValue(){
+  //   setCounter(counter++)
+  //   console.log('value added', counter)
+  // }
+  // const deleteValue = function deleteValue(){
+  //   setCounter(counter--)
+  //   console.log('value deleted ', counter)
+  // }
+
+  //assignment // add constraints(min value 0 and max value 20)
+  let [counter, setCounter] = useState(15)
+  let counter1 = 0
   const addValue = function addValue(){
-    counter++
-    console.log('value added', counter)
+    if(counter<=20){
+    setCounter(counter++)
+    console.log(counter1++)
   }
-  const deleteValue = function deleteValue(){
-    counter--
-    console.log('value deleted ', counter)
+  console.log('value added', {counter})
+}
+const deleteValue = function deleteValue(){
+  if(counter>-1){
+    setCounter(counter--)
+    console.log(counter1++)
+    }
+    console.log('value deleted ', {counter})
   }
   return (
     <>
@@ -20,11 +39,12 @@ function App() {
     <h1>counter value: {counter}</h1>
     <button
     onClick={addValue}
-    >Add value</button>
+    >Add value {counter}</button>
     <br />
     <button
     onClick={deleteValue}
-    >Delete Value</button>
+    >Delete Value {counter}</button>
+    <footer>footer: {counter}</footer>
     </>
   )
 }
