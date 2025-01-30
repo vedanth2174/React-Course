@@ -21,7 +21,16 @@ function App() {
   let counter1 = 0
   const addValue = function addValue(){
     if(counter<=20){
-    setCounter(counter++)
+    // setCounter(counter+1)
+    // setCounter(counter+1)
+    // setCounter(counter+1)
+    // setCounter(counter+1)
+    //this does not add this works in batch all are doing same task so in batch it will only be carried out only once
+
+    setCounter(prevCounter=> prevCounter+1)
+    setCounter(prevCounter=> prevCounter+1)
+    setCounter(prevCounter=> prevCounter+1)
+    //now this will work
     console.log(counter1++)
   }
   console.log('value added', {counter})
@@ -29,7 +38,7 @@ function App() {
 const deleteValue = function deleteValue(){
   if(counter>-1){
     setCounter(counter--)
-    console.log(counter1++)
+    console.log(counter1-1)
     }
     console.log('value deleted ', {counter})
   }
