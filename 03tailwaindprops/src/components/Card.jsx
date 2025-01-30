@@ -1,6 +1,7 @@
 import React from 'react'
 
-function Card(){
+function Card({username}){
+    console.log(username)
     return(
         <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
         <img class="w-24 h-24 rounded-full mx-auto" src="/sarah-dayan.jpg" alt="" width="384" height="512" />
@@ -14,7 +15,7 @@ function Card(){
             </blockquote>
             <figcaption class="font-medium">
             <div class="text-sky-500 dark:text-sky-400">
-                Sarah Dayan
+                {username}
             </div>
             <div class="text-slate-700 dark:t">
                 Staff Engineer, Algolia
